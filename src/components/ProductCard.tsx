@@ -1,18 +1,27 @@
 import { FC } from "react";
-interface IProps {
-  
-}
- const ProductCard: FC<IProps> = ({}) => {
+import Colors from "./Colors";
+import Button from "./Button";
+import { IProduct } from "../interfaces";
+interface IProps extends IProduct {}
+
+ const ProductCard: FC<IProps> = ({title, description, imageURL, price, colors, category }) => {
   return (
-    <div className="p-3 border rounded-xl">
-      <h2 className="font-bold">Modern Concrete Gloves</h2>
-      <img className="rounded-xl my-3" src="" alt="Product Image" />
-      <p className="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto dolor iure, temporibus rerum corporis fugiat saepe voluptas provident culpa reiciendis praesentium aperiam!</p>
-      {/* <Colors/> */}
-      <span>300$</span>
-      <button>Edit</button>
-      <button>Delete</button>
+    <>
+      <div className="p-3 border rounded-lg">
+      <h2 className="font-bold">{title}</h2>
+      <img className="rounded-lg my-3" src={imageURL} alt={`${title} Image`} />
+      <p className="">{description}</p>
+      <Colors colors={colors}/>
+      <div className="flex justify-between mb-2">
+        <span>{price}$</span>
+        <span>{category.name}</span>
+      </div>
+      <div className="flex gap-3">
+        <Button onClick={()=>{}} classes="bg-green-900 w-full">Edit</Button>
+        <Button classes="bg-red-800 w-full">Delete</Button>
+      </div>
     </div>
+    </>
   )
 }
 export default ProductCard;
