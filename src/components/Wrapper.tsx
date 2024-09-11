@@ -5,13 +5,11 @@ interface IProps {
   classes:string;
 }
  const Wrapper: FC<IProps> = ({classes}) => {
+  const products = ProductList.map( product => <ProductCard key={product.id} {...product} />);
   return (
     <>
       <div className={`${classes}`}>
-        {
-          ProductList.map( product => <ProductCard key={product.id} {...product} />            
-          )
-        }
+        {products}
       </div>
     </>
   )
