@@ -1,6 +1,7 @@
 import { FC } from "react";
 import ProductCard from "./ProductCard";
 import { ProductList } from "../data";
+import EditDialog from "./EditDialog";
 interface IProps {
   classes:string;
 }
@@ -9,7 +10,8 @@ interface IProps {
   return (
     <>
       <div className={`${classes}`}>
-        {products}
+        {/* {products} */}
+      <EditDialog text={"Edit Dialog Component"}/>
       </div>
     </>
   )
