@@ -9,7 +9,12 @@ interface IProps {
     <>
       {text}
       <form>
-        <h3>Title</h3>
+        {/* <Input>
+          <h3>Title</h3>
+          <label>
+            {/* .. */}
+          </label>
+        </Input>
         <label>
           <input type="button" value="" />
         </label>
@@ -34,7 +39,7 @@ interface IProps {
           <Colors colors={["bg-red-900"]}/>
           
         ))}
-        </div>
+        </div> */}
 
       </form>
     </>
