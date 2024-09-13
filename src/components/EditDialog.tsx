@@ -9,27 +9,11 @@ interface IProps {
     <>
       {text}
       <form>
-        {/* <Input>
+        {/* {/* <Input> */}
           <h3>Title</h3>
-          <label>
             {/* .. */}
-          </label>
         </Input>
-        <label>
-          <input type="button" value="" />
-        </label>
-        <h3>ImageURL</h3>
-        <label>
-          <input type="button" value="" />
-        </label>
-        <h3>Price</h3>
-        <label>
-          <input type="button" value="" />
-        </label>
-        <h3>Category</h3>
-        <label>
-          <input type="button" value="" />
-        </label>
+
         <h3>Description</h3>
         <h3>Standard Color</h3>
 
