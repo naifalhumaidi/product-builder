@@ -1,11 +1,15 @@
 import { FC } from "react";
+import Button from "./Button";
 interface IProps {
   
 }
  const deleteDialog: FC<IProps> = ({}) => {
   return (
     <>
-      Delete Dialog Component
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae praesentium sunt fugiat sint voluptatem veritatis.</p>
+    <Button/>
+    <Button/>
     </>
   )
 }
