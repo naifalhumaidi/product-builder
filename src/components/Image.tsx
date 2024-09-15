@@ -1,11 +1,12 @@
 import { FC } from "react";
 interface IProps {
-  
+  src:string,
+  alt:string
 }
- const Image: FC<IProps> = ({}) => {
+ const Image: FC<IProps> = ({src, alt}) => {
   return (
     <>
-      Image Component
+      <img src={src} alt={alt} />
     </>
   )
 }
