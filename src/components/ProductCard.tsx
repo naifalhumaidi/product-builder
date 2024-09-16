@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Colors from "./Colors";
 import Button from "./Button";
+import Image from "./Image";
 import { IProduct } from "../interfaces";
 import { sliceText } from "../utils/functions";
 interface IProps extends IProduct {};
@@ -10,7 +11,7 @@ interface IProps extends IProduct {};
   return (
     <>
       <div className="max-w-sm border rounded-lg p-3 mx-auto">
-        <img className="rounded-lg mb-3" src={imageURL} alt={`${title} Image`} />
+        <Image classes={"rounded-lg mb-3"} src={imageURL} alt={`${title} Image`} />
         <h2 className="font-bold">{title}</h2>
         <p className="h-11">{shortDescription}</p>
         <Colors colors={colors}/>
@@ -18,7 +19,7 @@ interface IProps extends IProduct {};
           <span>{price}$</span>
           <div className="flex gap-2 items-center">
             <span>{category.name}</span>
-            <img className="w-12 h-12 rounded-full" src={category.imageURL} alt="" />
+            <Image classes="w-12 h-12 rounded-full" src={category.imageURL} alt="" />
           </div>
         </div>
         <div className="flex gap-3">
