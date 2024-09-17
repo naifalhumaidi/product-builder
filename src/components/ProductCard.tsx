@@ -13,7 +13,7 @@ interface IProps extends IProduct {};
       <div className="max-w-sm border rounded-lg p-3 mx-auto">
         <Image classes={"rounded-lg mb-3"} src={imageURL} alt={`${title} Image`} />
         <h2 className="font-bold">{title}</h2>
-        <p className="h-11">{shortDescription}</p>
+        <p className="">{shortDescription}</p>
         <Colors colors={colors}/>
         <div className="flex justify-between mb-2">
           <span>{price}$</span>

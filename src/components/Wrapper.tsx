@@ -11,7 +11,7 @@ interface IProps {
     <>
       <div className={`${classes}`}>
         {/* {products} */}
-      <EditDialog text={"Edit Dialog Component"}/>
+        <EditDialog text={"Edit Dialog Component"}/>
       </div>
     </>
   )
