@@ -5,7 +5,7 @@ interface IProps {
  const Colors: FC<IProps> = ({colors}) => {
   return (
     <div className="flex gap-2">
-      { colors.map(color => <div className={`w-5 h-5 ${color} rounded-full`}></div>) }
+      { colors.map(color => <div key={color} className={`w-5 h-5 ${color} rounded-full`}></div>) }
     </div>
   )
 }
