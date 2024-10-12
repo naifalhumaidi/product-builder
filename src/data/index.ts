@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { IFormInput, IProduct } from "../interfaces/index";
+import { IColors, IFormInput, IProduct } from "../interfaces/index";
 
 export const ProductList: IProduct[] = [
     {
@@ -14,18 +14,18 @@ export const ProductList: IProduct[] = [
             imageURL: "https://picsum.photos/id/1032/400/300"
         }
     },
-    // {
-    //     id: uuid(),
-    //     title: "Elegant Handbag",
-    //     description: "This chic handbag is crafted from high-quality leather, featuring a spacious interior for essentials, perfect for work or a night out on the town.",
-    //     imageURL: "https://picsum.photos/id/1019/400/300",
-    //     price: "129.99",
-    //     colors: ["bg-green-800", "bg-blue-800", "bg-red-800", "bg-yellow-800"],
-    //     category: {
-    //         name: "Bags",
-    //         imageURL: "https://picsum.photos/id/1020/400/300"
-    //     }
-    // },
+    {
+        id: uuid(),
+        title: "Elegant Handbag",
+        description: "This chic handbag is crafted from high-quality leather, featuring a spacious interior for essentials, perfect for work or a night out on the town.",
+        imageURL: "https://picsum.photos/id/1019/400/300",
+        price: "129.99",
+        colors: ["bg-green-800", "bg-blue-800", "bg-red-800", "bg-yellow-800"],
+        category: {
+            name: "Bags",
+            imageURL: "https://picsum.photos/id/1020/400/300"
+        }
+    },
     // {
     //     id: uuid(),
     //     title: "Cozy Sweater",
@@ -182,3 +182,10 @@ export const FormInputList: IFormInput[] = ids.map(id =>(
         type: "text"
     }
 ))
+
+export const Colors: IColors[] = [
+    "bg-green-800", 
+    "bg-blue-800", 
+    "bg-red-800" ,
+    "bg-yellow-800"
+]

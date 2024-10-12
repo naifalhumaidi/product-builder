@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Colors from "./Colors";
+import ColorCircle from "./ColorCircle";
 import Button from "./Button";
 import Image from "./Image";
 import { IProduct } from "../interfaces";
@@ -8,13 +8,21 @@ interface IProps extends IProduct {};
 
  const ProductCard: FC<IProps> = ({title, description, imageURL, price, colors, category }) => {
   const shortDescription = sliceText(description, 100);
+  const ColorCircles = <div className="flex gap-2">
+    {colors.map(color=>(
+      <ColorCircle color={color}/>
+    ))}
+  </div>
+  console.log("Colors: ");
+  console.log(colors);
   return (
     <>
       <div className="max-w-sm border rounded-lg p-3 mx-auto space-y-2">
         <Image className={"rounded-lg mb-3"} src={imageURL} alt={`${title} Image`} />
         <h2 className="font-bold">{title}</h2>
         <p className="">{shortDescription}</p>
-        <Colors colors={colors}/>
+        {/* <Colors colors={colors}/> */}
+        {ColorCircles}
         <div className="flex justify-between mb-2">
           <span>{price}$</span>
           <div className="flex gap-2 items-center">

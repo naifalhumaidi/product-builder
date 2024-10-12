@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Button from "./Button";
-import AddProductModal from "./AddProductModal";
+import ProductModal from "./ProductModal";
 interface IProps {
   
 }
@@ -8,7 +8,7 @@ interface IProps {
   return (
     <>
       {/* Temporary */}
-      <AddProductModal/>
+      {/* <ProductModal/> */}
     </>
   )
 }

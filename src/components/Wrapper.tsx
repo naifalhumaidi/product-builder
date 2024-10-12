@@ -2,20 +2,23 @@ import { FC, useState } from "react";
 import ProductCard from "./ProductCard";
 import { ProductList } from "../data";
 import Button from "./Button";
-import AddProductModal from "./AddProductModal";
+import ProductModal from "./ProductModal";
+import { IProduct } from "../interfaces";
 interface IProps {
   className:string;
 }
  const Wrapper: FC<IProps> = ({className}) => {
-  const products = ProductList.map( product => <ProductCard key={product.id} {...product} />);
+  // Renderers
+  const [products, setProducts] = useState<IProduct[]>(ProductList);
+  const renderProductss = products.map( product => <ProductCard key={product.id} {...product} />);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(true);
   return (
     <>
       <div className={`${className}`}>
-        <Button onClick={_=>{setIsOpen(true)}} width={"w-fit"} className="mx-auto md:mx-0 mt-9 bg-blue-900">Add Product</Button>
-        <AddProductModal isOpen={isOpen} setIsOpen={setIsOpen}/>
-        {products}
+        <Button onClick={_=>setIsOpen(true)} width={"w-fit"} className="mx-auto md:mx-0 mt-9 bg-blue-900">Add Product</Button>
+        <ProductModal isOpen={isOpen} setIsOpen={setIsOpen} setProducts={setProducts}/>
+        {renderProductss}
       </div>
     </>
   )
